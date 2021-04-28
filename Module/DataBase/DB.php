@@ -32,7 +32,10 @@ class DB {
         $res = $this->sql->query($data);
         // echo "$res";
         while ($row = $res->fetch_assoc()) {
-            echo $row['id'].'<br>';
+        //  $row['id'];
+         if ($row['login']==$login and $row['pass']==$pass){
+             return $Ckecked = true;
+         }
         }
     }
 
